@@ -24,7 +24,7 @@
 //    [self testExtractString];
 //    [self setupImgView];
     [self uiConfig];
-    [self resetUpBtn:@" " name:@"欧阳振华"];
+    [self resetUpBtn:@"www" name:@"欧阳振华"];
 }
 
 #pragma mark - UI
@@ -57,10 +57,10 @@
     [self.headerBtn.layer addSublayer:layer];
     
     //3. ios9.0及以上
-    self.headerBtn.layer.backgroundColor = [UIColor blueColor].CGColor;
-    self.headerBtn.layer.cornerRadius = 30.0f;
-
-    self.headerBtn.imageView.layer.cornerRadius = 30.0f;
+//    self.headerBtn.layer.backgroundColor = [UIColor blueColor].CGColor;
+//    self.headerBtn.layer.cornerRadius = 30.0f;
+//
+//    self.headerBtn.imageView.layer.cornerRadius = 30.0f;
 }
 
 - (void)setupImgView {
