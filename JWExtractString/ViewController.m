@@ -21,14 +21,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-//    [self testExtractString];
-//    [self setupImgView];
-    [self uiConfig];
+
+    [self btnConfig];
     [self resetUpBtn:@"www" name:@"欧阳振华"];
 }
 
 #pragma mark - UI
-- (void)uiConfig {
+- (void)btnConfig {
     self.headerBtn.userInteractionEnabled = NO;
     self.headerBtn.backgroundColor = [UIColor clearColor];
   
