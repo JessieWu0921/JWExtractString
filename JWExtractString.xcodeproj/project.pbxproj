@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651ED755212AC31D00E03188 /* UIView+CornerRaduis.m in Sources */ = {isa = PBXBuildFile; fileRef = 651ED754212AC31D00E03188 /* UIView+CornerRaduis.m */; };
+		651ED75B212AD69400E03188 /* JWFamilyNameTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 651ED75A212AD69400E03188 /* JWFamilyNameTool.m */; };
 		65DD558C21218F60004951E8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD558B21218F60004951E8 /* AppDelegate.m */; };
 		65DD558F21218F60004951E8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65DD558E21218F60004951E8 /* ViewController.m */; };
 		65DD559221218F60004951E8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65DD559021218F60004951E8 /* Main.storyboard */; };
@@ -17,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		651ED753212AC31D00E03188 /* UIView+CornerRaduis.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+CornerRaduis.h"; sourceTree = "<group>"; };
+		651ED754212AC31D00E03188 /* UIView+CornerRaduis.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+CornerRaduis.m"; sourceTree = "<group>"; };
+		651ED759212AD69400E03188 /* JWFamilyNameTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JWFamilyNameTool.h; sourceTree = "<group>"; };
+		651ED75A212AD69400E03188 /* JWFamilyNameTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JWFamilyNameTool.m; sourceTree = "<group>"; };
 		65DD558721218F60004951E8 /* JWExtractString.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JWExtractString.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		65DD558A21218F60004951E8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		65DD558B21218F60004951E8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -72,6 +78,10 @@
 				65DD559921218F62004951E8 /* main.m */,
 				65DD55A321227B12004951E8 /* NSString+Empty.h */,
 				65DD55A421227B12004951E8 /* NSString+Empty.m */,
+				651ED753212AC31D00E03188 /* UIView+CornerRaduis.h */,
+				651ED754212AC31D00E03188 /* UIView+CornerRaduis.m */,
+				651ED759212AD69400E03188 /* JWFamilyNameTool.h */,
+				651ED75A212AD69400E03188 /* JWFamilyNameTool.m */,
 			);
 			path = JWExtractString;
 			sourceTree = "<group>";
@@ -102,6 +112,7 @@
 		65DD557F21218F60004951E8 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = JW;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = JessieWu;
 				TargetAttributes = {
@@ -147,8 +158,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				65DD558F21218F60004951E8 /* ViewController.m in Sources */,
+				651ED75B212AD69400E03188 /* JWFamilyNameTool.m in Sources */,
 				65DD559A21218F62004951E8 /* main.m in Sources */,
 				65DD55A521227B12004951E8 /* NSString+Empty.m in Sources */,
+				651ED755212AC31D00E03188 /* UIView+CornerRaduis.m in Sources */,
 				65DD558C21218F60004951E8 /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
