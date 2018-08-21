@@ -25,7 +25,7 @@
     // Do any additional setup after loading the view, typically from a nib.
 
     [self btnConfig];
-    [self resetUpBtn:@"" name:@"子"];
+    [self resetUpBtn:@"" name:@"司马懿"];
     
     self.headerImageView.radius = 6.0f;
     [self.headerImageView setupCornerRadius];

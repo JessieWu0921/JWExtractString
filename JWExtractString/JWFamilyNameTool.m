@@ -45,8 +45,8 @@
     familyName = [name substringWithRange:NSMakeRange(0, 1)];
     if ([self matchZhString:name]) {
         if (name.length >= 3) {
-            NSString *surname = [name substringWithRange:NSMakeRange(0, 2)];
-            if ([self matchDoubleSurname:surname]) {
+            if ([self matchDoubleSurname:name]) {
+                NSString *surname = [name substringWithRange:NSMakeRange(0, 2)];
                 familyName = surname;
             }
         }
@@ -62,6 +62,9 @@
     NSInteger length = name.length;
     if (length > 1) {
         lastName = [name substringWithRange:NSMakeRange(length - 2, 2)];
+        if (length == 3 && [self matchZhString:name] && [self matchDoubleSurname:name]) {
+            lastName = [name substringFromIndex:length - 1];
+        }
         if ([self matchEnString:name]) {
             //提取规则待定
         }
@@ -81,7 +84,8 @@
 
 - (BOOL)matchDoubleSurname:(NSString *)name {
     NSSet *doubleSurnameSet = [self doubleSurnames];
-    return [doubleSurnameSet containsObject:name];
+    NSString *surname = [name substringWithRange:NSMakeRange(0, 2)];
+    return [doubleSurnameSet containsObject:surname];
 }
 //复姓81个 来源百度
 - (NSSet <NSString *> *)doubleSurnames {
