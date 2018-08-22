@@ -37,12 +37,22 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YKS-f3-GVw">
+                                <rect key="frame" x="135" y="401" width="105" height="77"/>
+                                <color key="backgroundColor" red="0.98431372549999996" green="0.31764705879999999" blue="0.33725490200000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="105" id="KHP-tS-kfX"/>
+                                    <constraint firstAttribute="height" constant="77" id="Pec-4V-enr"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="G9O-Tu-w2l" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8Ps-b4-64L"/>
                             <constraint firstItem="G9O-Tu-w2l" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="109" id="NOq-K4-yQe"/>
+                            <constraint firstItem="YKS-f3-GVw" firstAttribute="top" secondItem="owH-2i-IWF" secondAttribute="bottom" constant="76" id="Rmy-HP-Kr9"/>
                             <constraint firstItem="owH-2i-IWF" firstAttribute="top" secondItem="G9O-Tu-w2l" secondAttribute="bottom" constant="76" id="Tg1-QK-yMT"/>
+                            <constraint firstItem="YKS-f3-GVw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VJX-5a-u2b"/>
                             <constraint firstItem="owH-2i-IWF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sRw-Be-Lar"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -50,6 +60,7 @@
                     <connections>
                         <outlet property="headerBtn" destination="owH-2i-IWF" id="34a-MW-S5Q"/>
                         <outlet property="headerImageView" destination="G9O-Tu-w2l" id="Kcq-34-5YE"/>
+                        <outlet property="redView" destination="YKS-f3-GVw" id="7Mu-VP-84y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

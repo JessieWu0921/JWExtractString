@@ -16,6 +16,7 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *headerImageView;
 @property (weak, nonatomic) IBOutlet UIButton *headerBtn;
+@property (weak, nonatomic) IBOutlet UIView *redView;
 @end
 
 @implementation ViewController
@@ -29,6 +30,9 @@
     
     self.headerImageView.radius = 6.0f;
     [self.headerImageView setupCornerRadius];
+    
+    self.redView.radius = 10.0f;
+    [self.redView setupCornerRadius];
 }
 
 #pragma mark - UI

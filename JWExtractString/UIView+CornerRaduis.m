@@ -11,15 +11,15 @@
 #import <QuartzCore/QuartzCore.h>
 #import <objc/runtime.h>
 
-static const char CornerRaduisKey;
+static const char *CornerRaduisKey = "CornerRaduisKey";
 @implementation UIView (CornerRaduis)
 
 - (float)radius {
-    return [objc_getAssociatedObject(self, &CornerRaduisKey) floatValue];
+    return [objc_getAssociatedObject(self, CornerRaduisKey) floatValue];
 }
 
 - (void)setRadius:(float)radius {
-    objc_setAssociatedObject(self, &CornerRaduisKey, @(radius), OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, CornerRaduisKey, @(radius), OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (void)setupCornerRadius {
