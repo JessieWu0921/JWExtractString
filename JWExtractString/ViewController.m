@@ -29,13 +29,22 @@
     [self resetUpBtn:@"" name:@"司马懿"];
     
     self.headerImageView.radius = 6.0f;
-    [self.headerImageView setupCornerRadius];
+//    [self.headerImageView setupCornerRadius];
     
     self.redView.radius = 10.0f;
-    [self.redView setupCornerRadius];
+//    [self.redView setupCornerRadius];
+    
+    [self setupUI];
 }
 
 #pragma mark - UI
+- (void)setupUI {
+    UIView *view1 = [[UIView alloc] initWithFrame:CGRectMake(20.0, 120.0, 200, 30)];
+    [view1 setBackgroundColor:[UIColor brownColor]];
+    view1.radius = 10.0f;
+    [self.view addSubview:view1];
+}
+
 - (void)btnConfig {
     self.headerBtn.userInteractionEnabled = NO;
   
@@ -49,7 +58,7 @@
     
     //2. 组合图层 (不会引起离屏渲染）
     self.headerBtn.radius = 30.0f;
-    [self.headerBtn setupCornerRadius];
+//    [self.headerBtn setupCornerRadius];
     
     //3. ios9.0及以上
 //    self.headerBtn.layer.backgroundColor = [UIColor blueColor].CGColor;

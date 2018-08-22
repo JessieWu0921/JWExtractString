@@ -12,6 +12,7 @@
 #import <objc/runtime.h>
 
 static const char *CornerRaduisKey = "CornerRaduisKey";
+
 @implementation UIView (CornerRaduis)
 
 - (float)radius {
@@ -20,6 +21,21 @@ static const char *CornerRaduisKey = "CornerRaduisKey";
 
 - (void)setRadius:(float)radius {
     objc_setAssociatedObject(self, CornerRaduisKey, @(radius), OBJC_ASSOCIATION_ASSIGN);
+    if (self.superview) {
+        [self setupCornerRadius];
+    }
+}
+
++ (void)load {
+    Method before = class_getInstanceMethod([self class], @selector(didMoveToSuperview));
+    Method after = class_getInstanceMethod([self class], @selector(zmk_didMoveToSuperview));
+    method_exchangeImplementations(before, after);
+}
+
+- (void)zmk_didMoveToSuperview {
+    if (self.superview && self.radius > 0.0) {
+        [self setupCornerRadius];
+    }
 }
 
 - (void)setupCornerRadius {
