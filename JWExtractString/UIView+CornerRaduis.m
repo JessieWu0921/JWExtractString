@@ -41,10 +41,12 @@ static const char *CornerRaduisKey = "CornerRaduisKey";
 - (void)setupCornerRadius {
     //组合图层避免离屏渲染
     CAShapeLayer *layer = [CAShapeLayer layer];
-    layer.fillColor = self.superview.backgroundColor.CGColor;
+    layer.fillColor = self.superview.layer.backgroundColor;
     
+    CGFloat width = CGRectGetWidth(self.bounds) + 2;
+    CGFloat height = CGRectGetHeight(self.bounds) + 2;
     UIBezierPath *path = [UIBezierPath bezierPathWithRoundedRect:self.bounds cornerRadius:self.radius];
-    UIBezierPath *toPath = [UIBezierPath bezierPathWithRect:self.bounds];
+    UIBezierPath *toPath = [UIBezierPath bezierPathWithRect:CGRectMake(0, 0, width, height)];
     [toPath appendPath:path];
     
     layer.fillRule = kCAFillRuleEvenOdd;
